@@ -1,5 +1,10 @@
 <h1>New Test</h1>
 
-<%= render 'form' %>
+<%= from_for @test do |f| %>
+
+  <p>Name: <%= f.text_field :name %></p>
+  <p>Email: <%= f.text_field :email %></p>
+  <p>DOB: <%= f.text_field :dob %></p>
+  <&= f.submit "Add this user!" %>
 
 <%= link_to 'Back', tests_path %>
