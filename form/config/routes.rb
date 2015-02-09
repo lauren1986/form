@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   patch 'tests/:id/' => 'tests#update'
 
-  get 'tests/:id' => 'tests#show', as: :beverage
+  get 'tests/:id' => 'tests#show', as: :test
 
   delete 'tests/:id' => 'tests#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
