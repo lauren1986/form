@@ -1,4 +1,19 @@
 Rails.application.routes.draw do
+  resources :tests
+
+  get 'tests' => 'tests#index'
+
+  get 'tests/new' => 'tests#new'
+
+  post 'tests/' => 'tests#create'
+
+  get 'tests/:id/edit' => 'tests#edit'
+
+  patch 'tests/:id/' => 'tests#update'
+
+  get 'tests/:id' => 'tests#show', as: :beverage
+
+  delete 'tests/:id' => 'tests#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
